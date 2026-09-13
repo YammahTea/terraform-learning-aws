@@ -1,0 +1,13 @@
+.idea
+*.pem
+*.env
+
+
+*.tfvars
+*.tfvars.json
+
+*.tfstate
+*.tfstate.*
+
+crash.log
+crash.log.*
