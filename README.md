@@ -52,19 +52,21 @@ This repo doubles as a **free, hands-on path** for learning OpenTofu on AWS.
 
 ```
 tofu-labs/
-├── main.tofu          # calls the modules
+├── main.tofu          # calls all module
 ├── provider.tofu      # terraform {} + provider "aws" {}
 ├── variables.tofu     # root locals (common tags)
 ├── outputs.tofu       # values printed after apply
-├── labs/              # 📘 lab briefs: what to build, no solutions
+├── labs/              # lab briefs: what to build, no solutions
 │   ├── lab01.md
 │   ├── lab02.md
 │   └── lab03.md
 └── network/           # network module
-    ├── vpc.tofu
-    ├── subnet.tofu
-    ├── variables.tofu
-    └── outputs.tofu
+    ├── vpc.tofu         
+    ├── subnet.tofu      
+    ├── gateways.tofu    # Internet Gateway
+    ├── route.tofu       # route tables, routes, subnet associations
+    ├── variables.tofu   
+    └── outputs.tofu     # IDs passed back to the root
 ```
 
 - `labs/` holds the **briefs** (the exercises)
