@@ -20,10 +20,10 @@ resource "aws_route" "igw_route" {
   gateway_id             = aws_internet_gateway.igw.id
 }
 
-resource "aws_route_table_association" "rt_association" {
+resource "aws_route_table_association" "rt_associations" {
   # associates all subnets with either the public or private route_table based on if it is public or not
   for_each = aws_subnet.main_vpc_subnets
 
-  subnet_id      = aws_subnet.main_vpc_subnets[each.key].id
+  subnet_id      = each.value.id
   route_table_id = each.value.map_public_ip_on_launch ? aws_route_table.public_route_table.id : aws_route_table.private_route_table.id
 }
