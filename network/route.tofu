@@ -27,4 +27,3 @@ resource "aws_route_table_association" "rt_association" {
   subnet_id      = aws_subnet.main_vpc_subnets[each.key].id
   route_table_id = each.value.map_public_ip_on_launch ? aws_route_table.public_route_table.id : aws_route_table.private_route_table.id
 }
-

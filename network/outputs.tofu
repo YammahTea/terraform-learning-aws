@@ -23,4 +23,3 @@ output "main_vpc_route_tables_ids" {
   }
   description = "A map of route tables names in the main VPC to their respective IDs"
 }
-
