@@ -41,7 +41,7 @@ This repo doubles as a **free, hands-on path** for learning OpenTofu on AWS.
 |---|---|---|
 | [01](labs/lab01.md) | VPC, provider setup, default tags | ✅ Done |
 | [02](labs/lab02.md) | Subnets, network module, outputs | ✅ Done |
-| [03](labs/lab03.md) | Internet Gateway, route tables, public / private subnets | ⏳ In progress |
+| [03](labs/lab03.md) | Internet Gateway, route tables, public / private subnets | ✅ Done |
 | 04 | Data sources, default VPC, Elastic IP | 🔜 Planned |
 | 05 | NAT Gateway | 🔜 Planned |
 | 06 | Security Groups, NACLs, EC2 | 🔜 Planned |
