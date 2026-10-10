@@ -18,24 +18,30 @@ variable "name_tag" {
 variable "subnets" {
 
   type = map(object({
-    cidr_block              = string
-    availability_zone       = string
-    map_public_ip_on_launch = bool
+    cidr_block        = string
+    availability_zone = string
+    is_public_subnet  = bool
   }))
 
   description = "A collection of subnets with their default configurations"
 
   default = {
     "1a-public-01" = {
-      cidr_block              = "10.0.1.0/24"
-      availability_zone       = "eu-north-1a"
-      map_public_ip_on_launch = true
+      cidr_block        = "10.0.1.0/24"
+      availability_zone = "eu-north-1a"
+      is_public_subnet  = true
+    }
+
+    "1c-public-01" = {
+      cidr_block        = "10.0.3.0/24"
+      availability_zone = "eu-north-1c"
+      is_public_subnet  = true
     }
 
     "1b-private-01" = {
-      cidr_block              = "10.0.2.0/24"
-      availability_zone       = "eu-north-1b"
-      map_public_ip_on_launch = false
+      cidr_block        = "10.0.2.0/24"
+      availability_zone = "eu-north-1b"
+      is_public_subnet  = false
     }
   }
 
